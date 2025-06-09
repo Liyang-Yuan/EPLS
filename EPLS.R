@@ -272,15 +272,15 @@ main_process <- function(
         
         # [5/5] 生成报告
         report <- generate_report(results, ms1_tol, intensity_col)
-        output_path <- file.path(output_dir, paste0(tools::file_path_sans_ext(basename(data_file)), "_result.csv"))  # 修复括号
+        output_path <- file.path(output_dir, paste0(tools::file_path_sans_ext(basename(data_file)), "_result.csv"))  
         fwrite(report, output_path)
-        message("Saved to: ", output_path, " | Time: ", round(difftime(Sys.time(), file_start, units = "secs")), "s")  # 补充逗号
+        message("Saved to: ", output_path, " | Time: ", round(difftime(Sys.time(), file_start, units = "secs")), "s")  
       }, error = function(e) handle_errors(e, basename(data_file)))
     })
     
     message("\n[Global] Processed ", length(data_files), " files | Total time: ", 
             round(difftime(Sys.time(), start_time, units = "mins")), " mins")
-  }, error = function(e) handle_errors(e), finally = plan(sequential))  # 修复括号
+  }, error = function(e) handle_errors(e), finally = plan(sequential))  
 }
 
 # ======================== 错误处理 ======================== #

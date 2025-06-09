@@ -323,9 +323,9 @@ execute_full_workflow <- function(
 
 # ======================== 示例执行 ======================== #
 execute_full_workflow(
-  mzml_input_dir = "D:/博士文件/文章/煎炸文章/Pseudotargeting/匹配算法文件/data/",
-  library_path = "D:/博士文件/文章/煎炸文章/Pseudotargeting/匹配算法文件/library/library.csv",
-  xcms_output_dir = "D:/博士文件/文章/煎炸文章/Pseudotargeting/匹配算法文件/results/V5/",
-  final_output_dir = "D:/博士文件/文章/煎炸文章/Pseudotargeting/匹配算法文件/results/V5/"
+  mzml_input_dir = "D:/data/",
+  library_path = "D:/library.csv",
+  xcms_output_dir = "D:/results1/",
+  final_output_dir = "D:/results2/"
 )
 
